@@ -1,0 +1,134 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn {
+  cursor: pointer;
+  vertical-align: baseline;
+}
+
+.img-fluid {
+  height: 150px;
+}
+
+.header-img {
+  height: 75px;
+}
+
+h2 {
+  border-bottom: 3px double black;
+  background: transparent;
+}
+
+span {
+  font-weight: bold;
+  vertical-align: baseline;
+}
+
+.badge-primary {
+  background: url("https://incels.wiki/w/images/b/bb/Bluepill.png");
+  background-size: 100%;
+  background-position-y: -4px;
+  cursor: pointer;
+}
+
+.badge-danger {
+  background: url("https://www.freeiconspng.com/uploads/red-pills-icon-png-19.png");
+  background-size: 100%;
+  background-position-y: -4px;
+  cursor: pointer;
+}
+
+.badge {
+  margin: 10px;
+}
+
+.p-pills {
+  color: white;
+  margin-top: 0px;
+  height: 325px;
+  background: url("https://vignette.wikia.nocookie.net/heroslist/images/a/ab/Morpheus.jpg/revision/latest?cb=20170219184947");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.space {
+  background: url("https://codepen.io/saransh/pen/BKJun/image/large.png");
+  mix-blend-mode: difference;
+}
+
+.pill-container {
+  background: rgba(0, 0, 0, 0.952);
+}
+
+.section {
+  border: 3px double black;
+  margin-bottom: 50px;
+}
+
+.droppable {
+  height: 150px;
+  width: 100%;
+}
+
+.span-text {
+  border: 1px dotted red;
+  background: whitesmoke;
+  cursor: grab;
+}
+
+#car {
+  background: url("https://vectorskey.com/wp-content/uploads/2019/02/vector-illustration-car-automobile-clip-art-copy.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#house {
+  background: url("http://pluspng.com/img-png/house-png-house-png-960.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#plane {
+  background: url("https://www.stickpng.com/assets/images/580b585b2edbce24c47b2d10.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.droppable-header {
+  background: whitesmoke;
+  opacity: 0;
+}
