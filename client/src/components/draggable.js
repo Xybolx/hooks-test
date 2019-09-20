@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import DraggableBox from "./draggableBox";
 import DroppableBox from "./droppableBox";
 
 const Draggable = () => {
+
+    const [isCorrect, setIsCorrect] = useState(false);
 
     return (
         <>
@@ -12,28 +14,40 @@ const Draggable = () => {
                     <DraggableBox
                         text="CAR"
                         id="car"
+                        isCorrect={isCorrect}
+                        setIsCorrect={setIsCorrect}
                     />
                 </div>
                 <div>
                     <DraggableBox
                         text="HOUSE"
                         id="house"
+                        isCorrect={isCorrect}
+                        setIsCorrect={setIsCorrect}
                     />
                 </div>
                 <div>
                     <DraggableBox
                         text="PLANE"
                         id="plane"
+                        isCorrect={isCorrect}
+                        setIsCorrect={setIsCorrect}
                     />
                 </div>
                 <DroppableBox
                     id="house"
+                    isCorrect={isCorrect}
+                    setIsCorrect={setIsCorrect}
                 />
                 <DroppableBox
                     id="plane"
+                    isCorrect={isCorrect}
+                    setIsCorrect={setIsCorrect}
                 />
                 <DroppableBox
                     id="car"
+                    isCorrect={isCorrect}
+                    setIsCorrect={setIsCorrect}
                 />
             </div>
         </>

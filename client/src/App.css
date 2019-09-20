@@ -50,7 +50,7 @@ h2 {
   background: transparent;
 }
 
-span {
+.result-span {
   font-weight: bold;
   vertical-align: baseline;
 }
@@ -94,6 +94,7 @@ span {
 .section {
   border: 3px double black;
   margin-bottom: 50px;
+  height: 100%;
 }
 
 .droppable {
@@ -131,4 +132,12 @@ span {
 .droppable-header {
   background: whitesmoke;
   opacity: 0;
+}
+
+.gSyqWR.clipWrapper.button {
+  display: flex !important;
+}
+
+.fa-stack {
+  vertical-align: bottom;
 }

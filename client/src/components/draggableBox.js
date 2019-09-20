@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import useDraggable from "./useDraggable";
 
-const DraggableBox = ({ text, id, spanId }) => {
+const DraggableBox = ({ text, id, spanId, isCorrect, setIsCorrect }) => {
 
     const el = useRef();
     useDraggable(el);

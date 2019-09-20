@@ -3,11 +3,10 @@ import { useCallback, useState } from "react";
 const useCountdown = initial => {
     const [value, setValue] = useState(initial);
 
-    const increment = useCallback(() => setValue(value => value + 1), [])
-    const decrement = useCallback(() => setValue(value => value - 1), [])
-    const clear = () => setValue(initial);
+    const decrement = useCallback(() => setValue(value => value - 1), []);
+    const clear = useCallback(() => setValue(initial), [initial]);
 
-    return [value, increment, decrement, clear]
+    return [value, decrement, clear];
 }
 
 export default useCountdown;

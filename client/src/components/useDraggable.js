@@ -12,25 +12,26 @@ const useDraggable = el => {
                 setOffset({ dx: newDx, dy: newDy });
             };
             document.addEventListener("mousemove", handleMouseMove);
+            document.addEventListener("touchstart", handleMouseMove);
             document.addEventListener(
                 "mouseup",
                 () => {
                     document.removeEventListener("mousemove", handleMouseMove);
                 },
                 { once: true }
-            );
-        };
-        el.current.addEventListener("mousedown", handleMouseDown);
-        const cleanUp = () => {
-            el.current.removeEventListener("mousedown", handleMouseDown);
-        }
+                );
+            };
+        let element = el.current;
+        element.addEventListener("touchend", handleMouseDown);
+        element.addEventListener("mousedown", handleMouseDown);
         return () => {
-            cleanUp();
+            element.removeEventListener("mousedown", handleMouseDown);
         };
     }, [dx, dy, el]);
 
     useEffect(() => {
-        el.current.style.transform = `translate3d(${dx}px, ${dy}px, 0)`;
+        let element = el.current;
+        element.style.transform = `translate3d(${dx}px, ${dy}px, 0)`;
     }, [dx, dy, el]);
 };
 

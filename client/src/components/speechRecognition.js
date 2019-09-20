@@ -3,7 +3,7 @@ import { socket } from "./sockets";
 import UserContext from "../components/user_context/context";
 import useSpeechRecognition from "./useSpeechRecognition";
 
-const SpeechRecognition = ({ addItem, clearArray }) => {
+const SpeechRecognition = ({ addToArray, clearArray }) => {
 
     const { user, setUser } = useContext(UserContext);
 
@@ -13,11 +13,13 @@ const SpeechRecognition = ({ addItem, clearArray }) => {
         console.log("end");
     };
     
-    
     const onResult = result => {
         setValue(result);
         if (result === "clear numbers") {
             clearArray();
+        }
+        if (result === "number") {
+            addToArray();
         }
     };
     
@@ -48,7 +50,7 @@ const SpeechRecognition = ({ addItem, clearArray }) => {
                         <textarea
                             id="transcript"
                             name="transcript"
-                            placeholder="Waiting for you to spaeak..."
+                            placeholder="Waiting for you to speak..."
                             value={value}
                             rows={3}
                         />

@@ -1,5 +1,4 @@
 import React from "react";
-// import SpeechRecognition from "./speechRecognition";
 import Choose from "./choose";
 import Toggle from "./toggle";
 import Countdown from "./countdown";
@@ -12,8 +11,8 @@ const Home = () => {
 
     return (
         <div className="col-md-6 offset-md-3 home-container">
-            <h2>React<img className="img-fluid header-img" alt="" src="logo192.png" />Hooks</h2>
-            {/* <SpeechRecognition /> */}
+            <h3>REACT<img className="img-fluid header-img" alt="" src="logo192.png" />REACT</h3>
+            <h3>Custom Hooks</h3>
             <UserArray />
             <NumberArray />
             <Counter />

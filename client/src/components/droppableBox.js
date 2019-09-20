@@ -1,10 +1,8 @@
 import React, { useRef } from "react";
 
-const DroppableBox = ({ id }) => {
+const DroppableBox = ({ id, setIsCorrect }) => {
 
     const el = useRef();
-    const el2 = useRef();
-    const el3 = useRef();
 
     const onDragEnter = () => {
         console.log("dragEnter");
@@ -22,32 +20,30 @@ const DroppableBox = ({ id }) => {
         ev.preventDefault();
         let id = ev.dataTransfer.getData('id');
         if (id === el.current.id) {
+            setIsCorrect(true);
             console.log("match");
-            el2.current.style.opacity = 1;
-            el3.current.style.opacity = 0;
+            el.current.style.backgroundColor = "green";            
         }
         if (id !== el.current.id) {
-            el2.current.style.opacity = 0;
-            el3.current.style.opacity = 1;
+            setIsCorrect(false);
+            el.current.style.backgroundColor = "red";
         }
         console.log(id + " dropped");
     };
 
     return (
         <>
-        <div
-            id={id}
-            ref={el}
-            className={`${id} droppable`}
-            name={id}
-            onDragEnter={onDragEnter}
-            onDragLeave={onDragLeave}
-            onDragOver={ev => onDragOver(ev)}
-            onDrop={ev => onDrop(ev)}
-        >
-        </div>
-        <h5 className="droppable-header" ref={el2}>Correct!</h5>
-        <h5 className="droppable-header" ref={el3}>Wrong!</h5>
+            <div
+                id={id}
+                ref={el}
+                className={`${id} droppable`}
+                name={id}
+                onDragEnter={onDragEnter}
+                onDragLeave={onDragLeave}
+                onDragOver={ev => onDragOver(ev)}
+                onDrop={ev => onDrop(ev)}
+            >
+            </div>
         </>
     );
 };
